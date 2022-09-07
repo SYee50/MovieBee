@@ -1,0 +1,6 @@
+framework module Pods_MovieBee_MovieBeeUITests {
+  umbrella header "Pods-MovieBee-MovieBeeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

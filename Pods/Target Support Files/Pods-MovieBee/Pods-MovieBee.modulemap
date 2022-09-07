@@ -1,0 +1,6 @@
+framework module Pods_MovieBee {
+  umbrella header "Pods-MovieBee-umbrella.h"
+
+  export *
+  module * { export * }
+}
