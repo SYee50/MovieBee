@@ -12,20 +12,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     // properties
     var movies = [[String:Any]]()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         tableView.dataSource = self
         tableView.delegate = self
-        
-        print("Hello")
-        
+                
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -43,11 +39,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     
                     // reload data for movies variable
                     self.tableView.reloadData()
-
-                    // TODO: Get the array of movies
-                    
-                    // TODO: Store the movies in a property to use elsewhere
-                    // TODO: Reload your table view data
                  
                     print(dataDictionary)
 
